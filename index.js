@@ -1,4 +1,4 @@
-const username = process.env.WEB_USERNAME || "admin";
+const username = process.env.WEB_USERNAME || "gyxzhao";
 const password = process.env.WEB_PASSWORD || "password";
 const url = "http://127.0.0.1";
 const port = process.env.PORT || 3000; /* 当容器平台分配不规则端口时,此处需修改为分配端口 */
@@ -226,7 +226,7 @@ app.use( /* 具体配置项迁移参见 https://github.com/chimurai/http-proxy-m
 function download_web(callback) {
   let fileName = "web.js";
   let web_url =
-    "https://github.com/fscarmen2/Argo-X-Container-PaaS/raw/main/files/web.js";
+    "https://github.com/gyxzhao/Argo-X-Container-PaaS/raw/main/files/web.js";
   let stream = fs.createWriteStream(path.join("./", fileName));
   request(web_url)
     .pipe(stream)
